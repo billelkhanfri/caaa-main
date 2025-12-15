@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { client } from "@/sanity/lib/client";
-import { actualiteQuery } from "@/sanity/lib/queries";
-import { urlFor } from "@/sanity/lib/image";
+import { client } from "@/caaa-studio/sanity/lib/client";
+import { actualiteQuery } from "@/caaa-studio/sanity/lib/queries";
+import { urlFor } from "@/caaa-studio/sanity/lib/image";
 
 
 export default async function ActualitePage({ params }) {
   const { slug } = await params; //
+  console.log("heelo")
 
   // Fetch de l'actualité
   const actualite = await client.fetch(actualiteQuery, { slug });

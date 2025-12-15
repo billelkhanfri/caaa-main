@@ -1,10 +1,10 @@
 // BlogPage.jsx (Server Component)
-import { client } from "@/sanity/lib/client";
-import { postsQuery } from "@/sanity/lib/queries";
+import { client } from "@/caaa-studio/sanity/lib/client";
+import { postsQuery } from "@/caaa-studio/sanity/lib/queries";
 import BlogList from "../components/blogList"; // Client Component
 import SidebarActualite from "../components/SidebarActualite";
 
-import { allActualitesQuery} from "@/sanity/lib/queries";
+import { allActualitesQuery} from "@/caaa-studio/sanity/lib/queries";
 
 
 export default async function BlogPage() {

@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { client } from "@/sanity/lib/client";
-import { postBySlugQuery } from "@/sanity/lib/queries";
-import { urlFor } from "@/sanity/lib/image";
+import { client } from "@/caaa-studio/sanity/lib/client";
+import { postBySlugQuery } from "@/caaa-studio/sanity/lib/queries";
+import { urlFor } from "@/caaa-studio/sanity/lib/image";
 import { PortableText } from "@portabletext/react";
 
 export default async function BlogPostPage({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
   const post = await client.fetch(postBySlugQuery, { slug });
 
   if (!post) return <div>Article introuvable</div>;

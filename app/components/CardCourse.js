@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { urlFor } from "@/sanity/image";
+import { urlFor } from "@/caaa-studio/sanity/image";
 import { PortableText } from "@portabletext/react";
 
 export default function CardCourse({ title, content, mainImage }) {
